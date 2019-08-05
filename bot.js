@@ -34,8 +34,7 @@ console.log(`This Code Was Made By : Mdax77x`);
 console.log(`MdAx77x CopyRight `);
  console.log(`ــــــــــــــــ`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`^play | By : ✈  xR1`)
-client.user.setStatus("idle")
+client.user.setGame(`^play | ^help | By : MdAx7zx . `)
  
 });			  
 
@@ -248,10 +247,28 @@ client.on('message', message => {
         .addField('^resume', 'تكملة الاغنية')
         .addField('^queue', 'اظهار قائمة التشغيل')
         .addField('^np', 'اظهار الاغنية اللي انت مشغلها حاليا')
-        .setFooter('Edited by :! - Mdax . ')
+        .setFooter('Edited by : MdAx7zx . ')
       message.channel.send(helpEmbed);
     }
 });
+
+client.on('message', message => {
+    if(!message.channel.guild) return;
+    if(message.content.startsWith('^ping')) { // حقوق مداكس
+        if (message.author.bot) return;
+        if(!message.channel.guild) return;
+        var Bping =`${Math.round(client.ping)}` // Mdax77x CopyRight | Toxic Codes
+                const E1ping = new Discord.RichEmbed()
+        .setTitle('ــــــــــــــــــــــــــــــ')
+        .addField(`**BOT Ping Is** :__${Bping}📶__`,"ــــــــــــــــــــــــــــــ")
+        .setFooter(`Requested by | ${message.author.tag}`) // حقوق مداكس
+        .setColor('RANDOM')
+        message.channel.send(E1ping);
+    }
+});
+
+
+
 
 
 
